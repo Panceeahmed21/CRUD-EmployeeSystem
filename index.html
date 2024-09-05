@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD</title>
+</head>
+
+<body>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="heading px-4 py-3 d-flex flex-md-row justify-content-between align-items-center flex-column ">
+                <h2 class="text-white">Manage Employees</h2>
+                <div class="actions d-flex">
+                    <button class="btn btn-danger me-3" id="deleteAll"><i class="fa fa-pencil"></i>
+                        Delete</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            class="fa fa-plus-circle text-white"></i> Add new Employee</button>
+
+                </div>
+            </div>
+            <div class="pt-2">
+                <div class="table-responsive">
+
+                    <table class="table fs-5  table-striped table-hover pointer-event">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                            </tr>
+
+
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Employee Information</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+
+                                    <input type="text" class="form-control" id="empName" placeholder="Name">
+
+                                    <p class="text-danger" id="nameMsg"></p>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="empEmail" placeholder="Email">
+                                    <p class="text-danger" id="emailMsg"></p>
+
+
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="empAddress" placeholder="Address">
+                                    <p class="text-danger" id="addressMsg"></p>
+
+
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" id="empPhone" placeholder="Phone">
+                                    <p class="text-danger" id="phoneMsg"></p>
+
+
+                                </div>
+                                <p class="bg-danger text-white p-2 text-center fs-5" id="warningEmpty">All fields are
+                                    required</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success" id="saveBtn">Save</button>
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal"
+                                    id="updateBtn">Update</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
